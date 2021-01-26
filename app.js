@@ -1,6 +1,9 @@
 // Require Libraries
 const express = require('express');
 
+// App Setup
+const app = express();
+
 // Somewhere near the top
 app.use(express.static('public'));
 
@@ -11,9 +14,6 @@ const Tenor = require("tenorjs").client({
   "Filter": "high", // "off", "low", "medium", "high", not case sensitive
   "Locale": "en_US", // Your locale here, case-sensitivity depends on input
 });
-
-// App Setup
-const app = express();
 
 // Middleware
 const exphbs  = require('express-handlebars');
